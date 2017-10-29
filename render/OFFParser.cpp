@@ -1,5 +1,6 @@
 #include "render/OFFParser.h"
 
+#include <fstream>
 #include <sstream>
 
 #include "render/MeshUtil.h"

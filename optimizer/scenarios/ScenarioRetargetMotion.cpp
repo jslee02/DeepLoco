@@ -1,4 +1,4 @@
-#include "scenarios/ScenarioRetargetMotion.h"
+#include "optimizer/scenarios/ScenarioRetargetMotion.h"
 #include "util/FileUtil.h"
 
 cScenarioRetargetMotion::cScenarioRetargetMotion()

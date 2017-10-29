@@ -507,7 +507,7 @@ std::string cDrawScenarioSimChar::BuildTextInfoStr() const
 	const auto& ctrl = character->GetController();
 
 	char buffer[256];
-#ifdef _LINUX_
+#ifdef __linux__
 	sprintf(buffer, "Time: %.2fs\nPosition: (%.2f, %.2f, %.2f)\nVelocity: (%.2f, %.2f, %.2f)\n",
 				time, com[0], com[1], com[2], com_vel[0], com_vel[1], com_vel[2]);
 #else

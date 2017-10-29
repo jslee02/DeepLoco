@@ -1,6 +1,6 @@
 #pragma once
 
-#include "scenarios/OptScenario.h"
+#include "optimizer/scenarios/OptScenario.h"
 #include "scenarios/ScenarioSimChar.h"
 #include "util/IndexManager.h"
 

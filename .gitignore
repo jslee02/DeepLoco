@@ -12,10 +12,6 @@
 x64/
 Debug/
 Release/
-optimizer/.vs/
-optimizer/x64/
-optimizer/Debug/
-optimizer/Release/
 output/
 resources/
 data/intermediate/

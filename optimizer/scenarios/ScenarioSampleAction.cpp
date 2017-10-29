@@ -1,4 +1,4 @@
-#include "scenarios/ScenarioSampleAction.h"
+#include "optimizer/scenarios/ScenarioSampleAction.h"
 #include "util/JsonUtil.h"
 #include "util/FileUtil.h"
 

@@ -1,4 +1,4 @@
-#include "scenarios/ScenarioProcessMocap.h"
+#include "optimizer/scenarios/ScenarioProcessMocap.h"
 #include "util/FileUtil.h"
 #include "anim/Character.h"
 
