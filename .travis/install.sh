@@ -18,11 +18,13 @@ libopencv-dev
 libhdf5-serial-dev
 protobuf-compiler
 libboost-all-dev
-libatlas-base-dev
-libopenblas-dev
 libgflags-dev
 libgoogle-glog-dev
 liblmdb-dev
+libatlas-base-dev
+gcc-4.8-multilib g++-4.8-multilib
+libf2c2-dev
+libglew-dev
 '
 
 sudo apt-get -qq --yes --force-yes install $CAFFE_DEPENDS
