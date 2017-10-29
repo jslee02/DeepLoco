@@ -26,3 +26,8 @@ liblmdb-dev
 '
 
 sudo apt-get -qq --yes --force-yes install $CAFFE_DEPENDS
+
+git clone https://github.com/BVLC/caffe
+cd caffe
+cmake . && make -j4 && make install
+
