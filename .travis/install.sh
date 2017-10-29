@@ -11,6 +11,8 @@ libbullet-dev
 sudo apt-get -qq --yes --force-yes install $APT
 
 CAFFE_DEPENDS='
+doxygen
+python-numpy
 libprotobuf-dev
 libleveldb-dev
 libsnappy-dev
