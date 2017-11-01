@@ -6,6 +6,7 @@
 #include <iostream>
 #include <string.h>
 #endif
+#include <boost/filesystem.hpp>
 
 FILE* cFileUtil::OpenFile(const std::string& file_name, const char* mode)
 {
@@ -328,6 +329,16 @@ bool cFileUtil::ReadMatrix(const std::string& filename, Eigen::MatrixXd& out_mat
 
 bool cFileUtil::AppendText(const std::string& str, const std::string& out_filename)
 {
+  const boost::filesystem::path path(out_filename);
+  if(!(boost::filesystem::exists(path.parent_path())))
+  {
+    if (!boost::filesystem::create_directory(path.parent_path()))
+    {
+      printf("Failed to create folder to write results %s\n", out_filename.c_str());
+      return false;
+    }
+  }
+
 	std::ofstream out_stream(out_filename, std::ios_base::app);
 
 	bool succ = !out_stream.fail();
