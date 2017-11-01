@@ -5,7 +5,7 @@ list(INSERT CMAKE_MODULE_PATH 0 "${CMAKE_SOURCE_DIR}/cmake")
 
 find_package(Boost COMPONENTS system filesystem regex REQUIRED)
 find_package(Eigen3 REQUIRED)
-find_package(Bullet REQUIRED)
+find_package(Bullet 2.82 REQUIRED) # requires >= 2.82
 find_package(OpenCV REQUIRED)
 find_package(Caffe REQUIRED)
 
