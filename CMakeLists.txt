@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.12)
-project(deeploco)
+project(DeepLoco)
 
 list(INSERT CMAKE_MODULE_PATH 0 "${CMAKE_SOURCE_DIR}/cmake") 
 
@@ -21,14 +21,24 @@ else()
   set(CMAKE_CXX_STANDARD 11)
 endif()
 
-file(GLOB_RECURSE header_files "*.h")
-file(GLOB_RECURSE source_files "*.cpp")
-
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/external)
 
-add_executable(deeploco ${source_files})
-target_compile_definitions(deeploco PRIVATE ${Opencv_DEFINITIONS} CPU_ONLY)
-target_include_directories(deeploco SYSTEM PRIVATE
+add_subdirectory(external/LodePNG)
+
+add_subdirectory(util)
+add_subdirectory(anim)
+add_subdirectory(learning)
+add_subdirectory(render)
+add_subdirectory(sim)
+add_subdirectory(scenarios)
+
+file(GLOB hdrs "*.h")
+file(GLOB srcs "*.cpp")
+add_executable(DeepLoco ${hdrs} ${srcs})
+target_compile_definitions(DeepLoco PRIVATE ${Opencv_DEFINITIONS} CPU_ONLY)
+target_include_directories(DeepLoco SYSTEM
+  PRIVATE
     ${EIGEN3_INCLUDE_DIR}
     ${Boost_INCLUDE_DIRS}
     ${BULLET_INCLUDE_DIRS}
@@ -36,7 +46,15 @@ target_include_directories(deeploco SYSTEM PRIVATE
     ${Caffe_INCLUDE_DIRS}
     ${GLEW_INCLUDE_DIRS}
 )
-target_link_libraries(deeploco PRIVATE
+target_link_libraries(DeepLoco
+  PRIVATE
+    external-lodepng
+    deepLocoScenarios
+    deepLocoLearning
+    deepLocoAnim
+    deepLocoSim
+    deepLocoUtil
+    deepLocoRender
     ${Boost_LIBRARIES}
     ${BULLET_LIBRARIES}
     ${OpenCV_LIBRARIES}
@@ -45,3 +63,5 @@ target_link_libraries(deeploco PRIVATE
     ${GLUT_glut_LIBRARY}
     ${GLEW_LIBRARIES}
 )
+
+add_subdirectory(optimizer)
