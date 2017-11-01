@@ -16,7 +16,6 @@ output/
 resources/
 data/intermediate/
 /obj
-/external
 /Makefile
 /TerrainRL
 /TerrainRL_Optimizer
