@@ -31,7 +31,7 @@ libglew-dev
 sudo apt-get -qq --yes --force-yes install $CAFFE_DEPENDS
 git clone https://github.com/BVLC/caffe
 cd caffe
-mkdir build && cd build && cmake .. -DCPU_ONLY=ON && make -j4 && sudo make install
+mkdir build && cd build && cmake .. -DCPU_ONLY=ON -DCMAKE_INSTALL_PREFIX=/usr/local/ && make -j4 && sudo make install
 
 # Install bullet
 git clone --depth 1 --single-branch --branch 2.87 https://github.com/bulletphysics/bullet3
