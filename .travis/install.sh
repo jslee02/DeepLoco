@@ -35,5 +35,5 @@ mkdir build && cd build && cmake .. && make -j4 && make install
 
 # Install bullet
 git clone --depth 1 --single-branch --branch 2.87 https://github.com/bulletphysics/bullet3
-cd bullet
+cd bullet3
 mkdir build && cd build && cmake .. && make -j4 && make install
