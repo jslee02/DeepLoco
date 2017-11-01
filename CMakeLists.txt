@@ -8,6 +8,10 @@ find_package(Eigen3 REQUIRED)
 find_package(Bullet 2.82 REQUIRED) # requires >= 2.82
 find_package(OpenCV REQUIRED)
 find_package(Caffe REQUIRED)
+find_package(OpenGL REQUIRED)
+find_package(OpenGL REQUIRED)
+find_package(GLUT REQUIRED)
+find_package(GLEW REQUIRED)
 
 if(CMAKE_VERSION VERSION_LESS "3.1")
   if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
@@ -29,10 +33,15 @@ target_include_directories(deeploco SYSTEM PRIVATE
     ${Boost_INCLUDE_DIRS}
     ${BULLET_INCLUDE_DIRS}
     ${OpenCV_INCLUDE_DIRS}
-    ${Caffe_INCLUDE_DIRS})
+    ${Caffe_INCLUDE_DIRS}
+    ${GLEW_INCLUDE_DIRS}
+)
 target_link_libraries(deeploco PRIVATE
     ${Boost_LIBRARIES}
     ${BULLET_LIBRARIES}
     ${OpenCV_LIBRARIES}
     ${Caffe_LIBRARIES}
+    ${OPENGL_LIBRARIES}
+    ${GLUT_glut_LIBRARY}
+    ${GLEW_LIBRARIES}
 )
