@@ -1,7 +1,7 @@
 #include "SpAlg.h"
 #include <iostream>
 
-#ifdef _LINUX_
+#ifdef __linux__
 	// Should initilize variables in cpp
 	const int cSpAlg::gSpVecSize;
 	const int cSpAlg::gSVTransRows;

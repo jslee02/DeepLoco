@@ -62,7 +62,7 @@ void CreateFrameBuffer( GLuint& buffer_obj, GLuint& texture, GLuint& depth_stenc
 	else
 	{
 		glBindFramebuffer(GL_FRAMEBUFFER, buffer_obj);
-#ifdef _LINUX_
+#ifdef __linux__
 		glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, texture, 0);
 #else
 		glFramebufferTexture(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, texture, 0);

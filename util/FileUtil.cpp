@@ -2,7 +2,7 @@
 #include <assert.h>
 #include <cstdarg>
 #include <memory>
-#ifdef _LINUX_
+#ifdef __linux__
 #include <iostream>
 #include <string.h>
 #endif
