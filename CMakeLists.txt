@@ -25,7 +25,7 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 add_executable(deeploco ${source_files})
 target_compile_definitions(deeploco PRIVATE ${Opencv_DEFINITIONS} CPU_ONLY)
 target_include_directories(deeploco SYSTEM PRIVATE
-    ${EIGEN3_INCLUDE_DIRS}
+    ${EIGEN3_INCLUDE_DIR}
     ${BULLET_INCLUDE_DIRS}
     ${Caffe_INCLUDE_DIRS})
 target_link_libraries(deeploco PRIVATE
