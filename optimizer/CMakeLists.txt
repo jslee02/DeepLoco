@@ -4,7 +4,7 @@ set(target_name DeepLoco_Optimizer)
 file(GLOB_RECURSE hdrs "*.hpp")
 file(GLOB_RECURSE srcs "*.cpp")
 
-add_library(${target_name} ${hdrs} ${srcs})
+add_executable(${target_name} ${hdrs} ${srcs})
 target_include_directories(
   ${target_name} SYSTEM
   PUBLIC
