@@ -26,7 +26,9 @@ add_executable(deeploco ${source_files})
 target_compile_definitions(deeploco PRIVATE ${Opencv_DEFINITIONS} CPU_ONLY)
 target_include_directories(deeploco SYSTEM PRIVATE
     ${EIGEN3_INCLUDE_DIR}
+    ${Boost_INCLUDE_DIRS}
     ${BULLET_INCLUDE_DIRS}
+    ${OpenCV_INCLUDE_DIRS}
     ${Caffe_INCLUDE_DIRS})
 target_link_libraries(deeploco PRIVATE
     ${Boost_LIBRARIES}
