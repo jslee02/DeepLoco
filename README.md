@@ -1,3 +1,5 @@
+# DeepLoco [![Build Status](https://travis-ci.org/jslee02/DeepLoco.svg?branch=master)](https://travis-ci.org/jslee02/DeepLoco)
+
 # Intro
 
 This project is designed to learn good navigation skills for simulated characters
