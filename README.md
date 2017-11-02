@@ -92,17 +92,24 @@ This setup has been tested on Windows 7 and 10 with visual studio 2013.
 
 After the system has been build there are two executable files that server different purposes. The **DeepLoco** program is for visually simulating the a controller and **DeepLoco_Optimize** is for optimizing the parameters of some controller.
 
-Examples:  
-	To simulate a controller/character  
-	./DeepLoco -arg_file= args/test_args.txt
-	To simulate a controller/character with a specific policy  
-	./DeepLoco_Optimizer -arg_file= args/opt_int_poli_hopper_eval.txt -policy_model= output/intermediate/trainer_int_model_0000160000.h5  
-	To Train a controller  
-	./DeepLoco_Optimizer -arg_file= args/opt_args_train.txt  
-	./DeepLoco_Optimizer -arg_file= args/opt_args_train_hopper.txt  
-	To Optimize a controllers parameters  
-	./DeepLoco_Optimizer -arg_file= args/opt_args_jump.txt  
-
+Examples: 
+* To simulate a controller/character  
+```
+./DeepLoco -arg_file= args/test_args.txt
+```
+* To simulate a controller/character with a specific policy
+```
+./DeepLoco_Optimizer -arg_file= args/opt_int_poli_hopper_eval.txt -policy_model= output/intermediate/trainer_int_model_0000160000.h5
+```
+* To Train a controller  
+```
+./DeepLoco_Optimizer -arg_file= args/opt_args_train.txt  
+./DeepLoco_Optimizer -arg_file= args/opt_args_train_hopper.txt
+```
+* To Optimize a controllers parameters  
+```
+./DeepLoco_Optimizer -arg_file= args/opt_args_jump.txt  
+```
 
 ## Key Bindings
 
