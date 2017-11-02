@@ -1,0 +1,29 @@
+language: cpp
+
+sudo: required
+
+dist: trusty
+
+cache:
+  apt: true
+  directories:
+    - /usr/local/Cellar
+
+matrix:
+  include:
+    - os: linux
+      compiler: gcc
+      env: BUILD_TYPE=Debug COMPILER=GCC
+    - os: linux
+      compiler: gcc
+      env: BUILD_TYPE=Release COMPILER=GCC
+
+install:
+  - '.travis/install.sh'
+
+script:
+  - '.travis/script.sh'
+
+after_failure: 
+  - cat build/Testing/Temporary/LastTest.log
+  - cat build/Testing/Temporary/LastTestsFailed.log

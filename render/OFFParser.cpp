@@ -1,5 +1,6 @@
 #include "render/OFFParser.h"
 
+#include <fstream>
 #include <sstream>
 
 #include "render/MeshUtil.h"
@@ -36,7 +37,7 @@ bool cOFFParser::LoadMesh(const std::string& filename, cDrawMesh& out_mesh)
 		{
 			bool valid_vert = AdvanceLine(f_stream, str);
 			assert(valid_vert);
-			str_stream = std::stringstream(str);
+			str_stream.str(str);
 
 			for (int i = 0; i < vert_dim; ++i)
 			{
@@ -51,7 +52,7 @@ bool cOFFParser::LoadMesh(const std::string& filename, cDrawMesh& out_mesh)
 		{
 			bool valid_face = AdvanceLine(f_stream, str);
 			assert(valid_face);
-			str_stream = std::stringstream(str);
+			str_stream.str(str);
 
 			int curr_vert_count = 0;
 			str_stream >> curr_vert_count;

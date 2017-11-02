@@ -4,8 +4,8 @@
 
 #include "scenarios/Scenario.h"
 #include "util/ArgParser.h"
-#include "opt/OptFunc.h"
-#include "opt/Optimizer.h"
+#include "optimizer/opt/OptFunc.h"
+#include "optimizer/opt/Optimizer.h"
 
 class cOptScenario : public cScenario, public cOptFunc,
 	public std::enable_shared_from_this<cOptFunc>

@@ -530,7 +530,7 @@ void Keyboard(unsigned char key, int x, int y) {
 	bool update = false;
 	switch (key) {
 		// Quit.
-#ifndef _LINUX_
+#ifndef __linux__
 	// case CTRL_CLOSE_EVENT:
 	// case CTRL_C_EVENT:
 #endif

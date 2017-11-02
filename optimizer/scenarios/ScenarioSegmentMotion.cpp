@@ -1,4 +1,4 @@
-#include "scenarios/ScenarioSegmentMotion.h"
+#include "optimizer/scenarios/ScenarioSegmentMotion.h"
 #include "util/FileUtil.h"
 
 cScenarioSegmentMotion::cScenarioSegmentMotion()
