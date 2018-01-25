@@ -12,7 +12,7 @@ cOptScenarioPoliEval::tEvalParams::tEvalParams()
 
 cOptScenarioPoliEval::cOptScenarioPoliEval()
 {
-	mTimeStep = 1 / 30.0;
+  mTimeStep = 1 / 30.0; // JS: low-level frequency (30Hz)?
 	mMaxEpisodes = std::numeric_limits<int>::max();
 	mMaxCycleCount = std::numeric_limits<int>::max();
 

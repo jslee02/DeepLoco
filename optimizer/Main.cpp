@@ -50,7 +50,7 @@ void SetupScenario()
 	gArgParser->ParseString("scenario", scenario_name);
 	if (scenario_name == "imitate_step")
 	{
-		auto scene = std::shared_ptr<cScenarioImitateStep>(new cScenarioImitateStep());
+    auto scene = std::shared_ptr<cScenarioImitateStep>(new cScenarioImitateStep());
 		scene->SetTimeStep(cOptScenario::gTimeStep);
 		scene->SetExpPoolSize(gNumThreads);
 
@@ -58,7 +58,7 @@ void SetupScenario()
 	}
 	else if (scenario_name == "train_hike")
 	{
-		auto scene = std::shared_ptr<cScenarioTrainHike>(new cScenarioTrainHike());
+    auto scene = std::shared_ptr<cScenarioTrainHike>(new cScenarioTrainHike());
 		scene->SetTimeStep(cOptScenario::gTimeStep);
 		scene->SetExpPoolSize(gNumThreads);
 

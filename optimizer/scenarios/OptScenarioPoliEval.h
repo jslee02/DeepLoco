@@ -4,6 +4,7 @@
 #include <mutex>
 #include "scenarios/ScenarioPoliEval.h"
 
+/// Policy evaluation scenario
 class cOptScenarioPoliEval : public cScenario
 {
 public:
@@ -38,8 +39,14 @@ protected:
 	double mTimeStep;
 	int mMaxEpisodes;
 	int mMaxCycleCount;
+
+  /// Current episode count
 	int mEpisodeCount;
+
+  /// Current cycle count
 	int mCycleCount;
+
+  /// JS: ?
 	double mAvgDist;
 
 	std::mutex mUpdateMutex;
