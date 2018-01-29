@@ -1,7 +1,7 @@
 set(target_name DeepLoco_Optimizer)
 
 # Search all header and source files
-file(GLOB_RECURSE hdrs "*.hpp")
+file(GLOB_RECURSE hdrs "*.hpp" "*.h")
 file(GLOB_RECURSE srcs "*.cpp")
 
 add_executable(${target_name} ${hdrs} ${srcs})

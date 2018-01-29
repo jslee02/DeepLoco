@@ -1,7 +1,7 @@
 set(target_name deepLocoAnim)
 
 # Search all header and source files
-file(GLOB_RECURSE hdrs "*.hpp")
+file(GLOB_RECURSE hdrs "*.hpp" "*.h")
 file(GLOB_RECURSE srcs "*.cpp")
 
 add_library(${target_name} ${hdrs} ${srcs})
